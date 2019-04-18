@@ -6,13 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//si.geilicdn.com">
+    <script src="../auto-compute-first-screen-time-master/dist/index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <img src="https://si.geilicdn.com/hz_fxweb_10a900000163b01214b00a02685e_110_110.jpeg?w=750&h=750" alt="">
-    <img src="https://si.geilicdn.com/vshop775500968-1479353079.jpeg?w=120&h=120&cp=1" alt="">
-    <script>
-        console.log(performance)
-    </script>
+   <a href="./next.html">prefetch</a>
+   <script>
+        window.autoComputeFirstScreenTime({
+        onReport: function(result) {
+            if (result.success) {
+                console.log(result.firstScreenTime);
+            }
+        }
+    });
+    </script> 
 </body>
 </html>
