@@ -15,22 +15,22 @@
         var myChart = echarts.init(document.getElementById('main'));
 
         var data = {
-            legendData: ['有dns', '无dns'],
+            legendData: ['有TCP', '无TCP'],
             seriesData: [
                 {
-                    name: '有dns',
-                    value: 2707150,
+                    name: '有TCP',
+                    value: 3458375,
                 },
                 {
-                    name: '无dns',
-                    value: 82400188
+                    name: '无TCP',
+                    value: 85102900
                 }
             ]
         }
 
         option = {
             title: {
-                text: '资源访问dns占比',
+                text: '有无tcp占比排队占比',
                 x: 'center'
             },
             tooltip: {

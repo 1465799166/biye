@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../index.js"></script>
+    <title>Document</title>
+    <style>
+        .img {
+            width: 200px;
+            height: 200px;
+            background: url('https://img-blog.csdnimg.cn/20190419144748525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3NzgyMzcy,size_16,color_FFFFFF,t_70');
+        }
+
+        .img1 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -0px -0px;
+
+        }
+
+        .img2 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -200px -0px;
+        }
+
+        .img3 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -400px -0px;
+        }
+
+        .img4 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -0px -200px;
+        }
+
+        .img5 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -200px -200px;
+            background-size: 100% 100%;
+        }
+
+        .img6 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -400px -200px;
+        }
+
+        .img7 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -0px -400px;
+        }
+
+        .img8 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -200px -400px;
+        }
+
+        .img9 {
+            /* width: 200px;
+            height: 200px; */
+            background-position: -400px -400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img class="img1" src="./img/sprites.png" alt=""> -->
+    <div class="img img1"></div>
+    <div class="img img2"></div>
+    <div class="img img3"></div>
+    <div class="img img4"></div>
+    <div class="img img5"></div>
+    <div class="img img6"></div>
+    <div class="img img7"></div>
+    <div class="img img8"></div>
+    <div class="img img9"></div>
+    <script>
+        window.autoComputeFirstScreenTime({
+            onReport: function (result) {
+                if (result.success) {
+                    console.log('首屏时间：' + result.firstScreenTime + 'ms');
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../index.js"></script>
+    <title>Document</title>
+    <style>
+        .img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .img1 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419143835686.png');
+            background-size: 100% 100%;
+        }
+
+        .img2 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144411736.png');
+            background-size: 100% 100%;
+        }
+
+        .img3 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144433807.png');
+            background-size: 100% 100%;
+        }
+
+        .img4 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144446950.png');
+            background-size: 100% 100%;
+        }
+
+        .img5 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144500145.png');
+            background-size: 100% 100%;
+        }
+
+        .img6 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144500145.png');
+            background-size: 100% 100%;
+        }
+
+        .img7 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144533173.png');
+            background-size: 100% 100%;
+        }
+
+        .img8 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144544206.png');
+            background-size: 100% 100%;
+        }
+
+        .img9 {
+            /* width: 200px;
+            height: 200px; */
+            background: url('https://img-blog.csdnimg.cn/20190419144555288.png');
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img class="img1" src="./img/sprites.png" alt=""> -->
+    <div class="img img1"></div>
+    <div class="img img2"></div>
+    <div class="img img3"></div>
+    <div class="img img4"></div>
+    <div class="img img5"></div>
+    <div class="img img6"></div>
+    <div class="img img7"></div>
+    <div class="img img8"></div>
+    <div class="img img9"></div>
+    <script>
+        window.autoComputeFirstScreenTime({
+            onReport: function (result) {
+                if (result.success) {
+                    console.log('首屏时间：' + result.firstScreenTime + 'ms');
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
