@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//si.geilicdn.com">
-    <script src="../auto-compute-first-screen-time-master/dist/index.js"></script>
+    <script src="../index.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-   <a href="./next.html">prefetch</a>
-   <script>
+    <a href="./next.html">prefetch</a>
+    <script>
         window.autoComputeFirstScreenTime({
-        onReport: function(result) {
-            if (result.success) {
-                console.log(result.firstScreenTime);
+            onReport: function (result) {
+                if (result.success) {
+                    console.log(result.firstScreenTime);
+                }
             }
-        }
-    });
-    </script> 
+
+        });
+        
+    </script>
 </body>
+
 </html>

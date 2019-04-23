@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./worker.js"></script>
+    <script src="../index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="test"></div>
+    <script>
+        window.autoComputeFirstScreenTime({
+            onReport: function (result) {
+                if (result.success) {
+                    console.log(result.firstScreenTime);
+                }
+            }
+        });
+    </script>
+    <script>
+        // for(let i = 0; i < 10000; i++) {
+        //     console.log(i)
+        // }
+        // for(let i = 0; i< 1000; i++) {
+        //     var colorList = ['red', 'green', 'blue']
+        //     var dom = document.createElement("div")
+        //     dom.style.width = '100px'
+        //     dom.style.height = '100px'
+        //     dom.style.background = colorList[i % 3]
+        //     document.body.appendChild(dom)
+        // }
+    </script>
+</body>
+
+</html>
