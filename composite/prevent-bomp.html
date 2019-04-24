@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @-webkit-keyframes slide {
+            from {
+                transform: none;
+            }
+
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        .animating {
+            /* position: relative;
+            z-index: 1; */
+            width: 300px;
+            height: 30px;
+            background-color: orange;
+            color: #fff;
+            -webkit-animation: slide 5s alternate linear infinite;
+        }
+
+        ul {
+
+            padding: 5px;
+            border: 1px solid #000;
+        }
+
+        .box {
+
+            width: 600px;
+            height: 30px;
+            margin-bottom: 5px;
+            background-color: blue;
+            color: #fff;
+            position: relative;
+            /* 会导致无法压缩：squashingClippingContainerMismatch */
+            overflow: hidden;
+        }
+
+        .inner {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 2px;
+            margin: 0;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animating">composited animating</div>
+    <ul class="wrap">
+        <!-- assume overlap -->
+        <li class="box">
+            <!-- assume overlap -->
+            <p class="inner">asume overlap, 因为 squashingClippingContainerMismatch 无法压缩</p>
+        </li>
+    </ul>
+    <script>
+        
+        for(let i = 0; i < 2000; i ++) {
+            var inner = document.createElement('p')
+            inner.classList.add('inner')
+            inner.innerHTML = 'asume overlap, 因为 squashingClippingContainerMismatch 无法压缩'
+            var box = document.createElement('li')
+            box.classList.add('box')
+            box.appendChild(inner)
+            document.querySelector('.wrap').appendChild(box)
+        }
+         
+    </script>
+</body>
+
+</html>
